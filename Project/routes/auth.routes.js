@@ -70,7 +70,7 @@ router.post("/signup", isLoggedOut, (req, res, next) => {
         delete req.session.currentUser.password;
       }) 
     .then(() => {
-      res.redirect("/profile");
+      res.redirect("/profile/edit-profile");
     })
     .catch((error) => {
       if (error instanceof mongoose.Error.ValidationError) {

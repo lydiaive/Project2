@@ -20,6 +20,10 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+      fullname: String,
+      profileinfo: String,
+      imageUrl: String
+
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
