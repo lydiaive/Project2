@@ -19,4 +19,16 @@ router.get("/", isLoggedIn, async(req, res) => {
   });
 
 
+router.get("/detail/:id", isLoggedIn, async(req, res) => {
+  const id = req.params.id
+  const user = req.session.currentUser
+  try {
+    const locationDb = await Location.findById(id)
+    res.render("location/spot-detail", {locationDb, user});
+  } catch (error) {
+    console.log(error)
+  }
+  });
+
+
 module.exports = router;

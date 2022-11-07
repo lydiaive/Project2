@@ -1,1 +1,14 @@
 <h1>location: detail</h1>
+{{#if user.username}}
+<p>{{user.username}} is logged in</p>
+{{/if}}
+<section class="detail-container">
+        <img src="{{locationDb.photo}}" alt="location-image" class="location-img" width="300px">
+        <article class="detail-data">
+            <h3>Location-Name: {{locationDb.city}}</h3>
+            <p>Description: {{locationDb.description}}</p>
+            <p>Category: {{locationDb.category}}</p>
+            <p>Level: {{locationDb.level}}</p>
+            <p>Author: {{locationDb.creator}}</p>
+        </article>
+</section>
