@@ -20,8 +20,8 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-      fullname: String,
-      profileinfo: String,
+      fullName: String,
+      profileInfo: String,
       imageUrl: String
 
   },
