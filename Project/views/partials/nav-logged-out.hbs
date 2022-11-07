@@ -1,0 +1,13 @@
+<a href="/" class="logo"><img class="logo-img" src="/images/favicon.ico" alt="logo"></a>
+<ul>
+{{!--    if logged in and we decide, that home can be reached logged in --}}
+    <a href="#">About</a>
+    <a href="#">What to expect</a>
+{{!--    if logged out --}}
+    <a href="/auth/signup">Sign Up</a>
+    <a href="/auth/login">Log In </a>
+{{!--    if logged in and we decide, that home can be reached logged in --}}
+    <form action="/auth/logout" method="post">
+        <button>Log Out</button>
+    </form>
+</ul>

@@ -16,6 +16,7 @@ const favicon = require("serve-favicon");
 // ℹ️ global package used to `normalize` paths amongst different operating systems
 // https://www.npmjs.com/package/path
 const path = require("path");
+const hbs = require("hbs");
 
 // ℹ️ Session middleware for authentication
 // https://www.npmjs.com/package/express-session
@@ -30,7 +31,7 @@ const MONGO_URI =
   process.env.MONGODB_URI || "mongodb://localhost:27017/project2";
 
 // Middleware configuration
-module.exports = (app) => {
+module.exports = (app, hbs) => {
   // In development environment the app logs
   app.use(logger("dev"));
 
@@ -43,8 +44,22 @@ module.exports = (app) => {
   app.set("views", path.join(__dirname, "..", "views"));
   // Sets the view engine to handlebars
   app.set("view engine", "hbs");
-  // AHandles access to the public folder
+  hbs.registerPartials(path.join(__dirname, "..", "views/partials"))
+  // Handles access to the public folder
   app.use(express.static(path.join(__dirname, "..", "public")));
+
+  //Handle access to the partials
+/*   app.engine('hbs', hbs({
+    extname: 'hbs', 
+    defaultLayout: 'base', 
+    layoutsDir: path.join(__dirname, 'views/layouts'),
+    partialsDir  : [
+        //  path to your partials
+        path.join(__dirname, 'views/partials'),
+      ]
+    })); */
+ 
+
 
   // Handles access to the favicon
   app.use(
