@@ -26,7 +26,7 @@ router.get("/edit-profile", isLoggedIn, (req, res) => {
 res.render("profile/edit-profile");
 });
 
-router.post('/img-upload', fileUploader.single('profileimg'), async (req, res) => {
+router.post('/img-upload', fileUploader.single('profileImg'), async (req, res) => {
 const { fullName, profileInfo } = req.body;
 const userId = req.session.currentUser._id
 //console.log(userId, fullName, profileInfo)
