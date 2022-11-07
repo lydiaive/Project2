@@ -1,0 +1,19 @@
+<a href="/" class="logo"><img class="logo-img" src="/images/logo.png" alt="logo"></a>
+<ul>
+{{!--    if logged in and we decide, that home can be reached logged in --}}
+    <a href="#">About</a>
+    <a href="#">What to expect</a>
+{{!--    if logged out --}}
+    <a href="/auth/signup">Sign Up</a>
+    <a href="/auth/login">Log In </a>
+{{!--    if logged in and we decide, that home can be reached logged in --}}
+    <form action="/auth/logout" method="post">
+        <button>Log Out</button>
+    </form>
+    <a href="/location">Main Feed</a>
+    <a href="/location/create">Create New Location</a>
+    <a href="/location/map">Location Map</a>
+    <a href="/profile/posts">My Posts</a>
+    <a href="/location/favorites">Favorites</a>
+    <a href="/location/my-locations">My Locations</a>
+</ul>

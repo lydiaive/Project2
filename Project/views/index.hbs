@@ -1,19 +1,17 @@
 {{!-- {{> nav-logged-out}} --}}
-<nav class="navbar">
-    <a href="/" class="logo"><img class="logo-img" src="/images/favicon.ico" alt="logo"></a>
-    <ul>
-    {{!--    if logged in and we decide, that home can be reached logged in --}}
-        <a href="#">About</a>
-        <a href="#">What to expect</a>
-    {{!--    if logged out --}}
-        <a href="/auth/signup">Sign Up</a>
-        <a href="/auth/login">Log In </a>
-    {{!--    if logged in and we decide, that home can be reached logged in --}}
-        <form action="/auth/logout" method="post">
-            <button>Log Out</button>
-        </form>
-    </ul>
-</nav>
+<a href="/" class="logo"><img class="logo-img" src="/images/logo.png" alt="logo"></a>
+<ul>
+{{!--    if logged in and we decide, that home can be reached logged in --}}
+    <a href="#">About</a>
+    <a href="#">What to expect</a>
+{{!--    if logged out --}}
+    <a href="/auth/signup">Sign Up</a>
+    <a href="/auth/login">Log In </a>
+{{!--    if logged in and we decide, that home can be reached logged in --}}
+    <form action="/auth/logout" method="post">
+        <button>Log Out</button>
+    </form>
+</ul>
 
 <h1>{{appTitle}} 🚀</h1>
 <p>Welcome Ironhacker!</p>
