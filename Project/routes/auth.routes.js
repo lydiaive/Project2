@@ -17,7 +17,7 @@ const isLoggedIn = require("../middleware/isLoggedIn");
 
 // GET /auth/signup
 router.get("/signup", isLoggedOut, (req, res) => {
-  res.render("auth/signup");
+  res.render("auth/signup",  {layout:false});
 });
 
 // POST /auth/signup
@@ -88,7 +88,7 @@ router.post("/signup", isLoggedOut, (req, res, next) => {
 
 // GET /auth/login
 router.get("/login", isLoggedOut, (req, res) => {
-  res.render("auth/login");
+  res.render("auth/login", {layout:false});
 });
 
 // POST /auth/login

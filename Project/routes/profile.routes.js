@@ -15,7 +15,7 @@ router.get("/", isLoggedIn, async (req, res) => {
     try {
         const profile = await User.findById(userId)
         console.log(profile)
-        res.render("profile/profile", profile);
+        res.render("profile/profile", profile);//CHECK IF IT WORKS  {layout:false}
     } catch (error) {
         console.log(error)
     }
