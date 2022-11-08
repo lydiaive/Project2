@@ -1,1 +1,28 @@
 <h1>create location</h1>
+
+<form action="/location/create" class="create-location" method="post" enctype="multipart/form-data">
+    <label for="city">Location Name:</label>
+    <input type="text" name="city" id="city">
+
+    <label for="description">Location Description:</label>
+    <textarea id="description" name="description" rows="4" cols="50" placeholder="Describe this location..."></textarea>
+
+    <label for="category">Choose a Sports Category:</label>
+    <select name="category" id="category">
+        <option value="Surf">Surf</option>
+        <option value="Climbing">Climbing</option>
+    </select>
+
+    <label for="level">Choose a Level of Difficulty:</label>
+    <select name="level" id="level">
+        <option value="Beginner">Beginner</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Expert">Expert</option>
+    </select>
+
+    <label for="photo">Update Location Image:<label>
+    <input type="file" name="photo" />
+
+    <button type="submit">Create</button>
+
+</form>

@@ -7,7 +7,6 @@ const mongoose = require("mongoose");
 
 const User = require("../models/User.model");
 const fileUploader = require('../config/cloudinary.config');
-
 const isLoggedIn = require("../middleware/isLoggedIn");
 
 router.get("/", isLoggedIn, async (req, res) => {
@@ -19,7 +18,6 @@ router.get("/", isLoggedIn, async (req, res) => {
     } catch (error) {
         console.log(error)
     }
-   
   });
 
 router.get("/edit-profile", isLoggedIn, (req, res) => {
@@ -31,13 +29,14 @@ const { fullName, profileInfo } = req.body;
 const userId = req.session.currentUser._id
 //console.log(userId, fullName, profileInfo)
 try {
-    const imgUpload = await User.findByIdAndUpdate(userId, { fullName, profileInfo, imageUrl: req.file.path });
+    const imgUpload = await User.findByIdAndUpdate(userId, { 
+        fullName, 
+        profileInfo, 
+        imageUrl: req.file.path });
     //console.log(imgUpload)
     res.redirect("/profile");
-    
 } catch (error) {
     console.log(`Error while uploading profile-image: ${error}`)
-    
     } 
 });
 

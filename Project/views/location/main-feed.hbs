@@ -1,1 +1,17 @@
 <h1>main feed</h1>
+
+<section class="location-container">
+    {{#each locationDb}}
+    <div class="location-card">
+        <img src="{{this.photo}}" alt="location-image" class="location-img" width="250px">
+        <article class="location-data">
+            <h3>Location-Name: {{this.city}}</h3>
+            <p>Description: {{this.description}}</p>
+            <p>Category: {{this.category}}</p>
+            <p>Level: {{this.level}}</p>
+            <p>Author: {{this.creator}}</p>
+            <a href="/location/detail/{{this._id}}" class="detail-button">Go to Detail</a>
+        </article>
+    </div>
+    {{/each}}
+</section>
