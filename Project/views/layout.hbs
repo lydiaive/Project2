@@ -9,22 +9,30 @@
   </head>
 
   <body>
+    <nav class='indexNav navFlex'>
+      {{!-- <a href="/" class="logo"><img class="profileImage" src="/images/profilePrototype.png" alt="logo"></a> --}}
+      <img class="profileImage" src="/images/profilePrototype.png" alt="logo">
+      <img class="show-modal" src="/images/menu.png" alt="menuImg"></a>
+      <section class="modal hidden"> 
+        <button class="close-modal">x</button>
+        <div class="linkFlex">
+          <a href="/location">Main Feed</a>
+          <a href="/location/create">Create New Location</a>
+          <a href="/location/map">Location Map</a>
+          <a href="/profile">Profile</a>
+          <a href="/profile/edit-profile">Edit Profile</a>
+          <a href="/profile/posts">My Posts</a>
+          <a href="/location/favorites">Favorites</a>
+          <a href="/location/my-locations">My Locations</a>
+           <form action="/auth/logout" method="post">
+            <button class="navLogOutBtn">Log Out</button>
+           </form>
+         </div>
+      </section>
+    </nav>
+      <div class="overlay hidden"></div>
 
     {{{body}}}
-    <section class="nav-help">
-      <a href="/">Home</a>
-      <a href="/auth/signup">Sign Up</a>
-      <a href="/auth/login">Log In </a>
-      <a href="/location">Main Feed</a>
-      <a href="/profile">Profile</a>
-      <a href="/profile/edit-profile">Edit Profile</a>
-      <a href="/location/create">Create Location</a>
-      <a href="/profile/favorites">Favorites</a>
-      <a href="#">#</a>
-      <form action="/auth/logout" method="post">
-        <button>Log Out</button>
-      </form>
-    </section>
 
     <script src="/js/script.js"></script>
   </body>
