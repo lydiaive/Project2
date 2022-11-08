@@ -17,11 +17,13 @@ const locationSchema = new Schema({
         type:String,
         required: true,
     },
-    coordinate:{
+    coordinate: 
+    {
         type:Array,
-        required: true,
-        unique: true
-    },
+        default: []
+        /* required: true, 
+        unique: true*/
+    }, 
     photo:{
         type:String, //LINK 
         required: true,
