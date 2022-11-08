@@ -6,6 +6,7 @@ const router = express.Router();
 const mongoose = require("mongoose");
 
 const User = require("../models/User.model");
+const Location = require("../models/Location.model")
 const fileUploader = require('../config/cloudinary.config');
 const isLoggedIn = require("../middleware/isLoggedIn");
 
@@ -21,7 +22,7 @@ router.get("/", isLoggedIn, async (req, res) => {
   });
 
 router.get("/edit-profile", isLoggedIn, (req, res) => {
-res.render("profile/edit-profile");
+    res.render("profile/edit-profile");
 });
 
 router.post('/img-upload', fileUploader.single('profileImg'), async (req, res) => {
@@ -38,6 +39,20 @@ try {
 } catch (error) {
     console.log(`Error while uploading profile-image: ${error}`)
     } 
+});
+
+router.get("/favorites", isLoggedIn, async (req, res) => {
+ const user = req.session.currentUser
+    try {
+        const favDb = await User.findById(user._id)
+        console.log(favDb)
+        const locPopulate = await favDb.populate("favorites")
+        console.log(locPopulate)
+        res.render("profile/favorites", {locPopulate});
+    } catch (error) {
+        console.log(error)
+    }
+    
 });
 
 module.exports = router;

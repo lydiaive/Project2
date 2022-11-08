@@ -1,1 +1,20 @@
 <h1>my favorites</h1>
+
+<section class="location-container">
+    {{#each locPopulate.favorites}}
+    <div class="location-card">
+        <img src="{{this.photo}}" alt="location-image" class="location-img" width="250px">
+        <form action="/like/{{this._id}}/delete" method="post">
+            <button><img src="/images/bin.png" alt="" width="40px"></button>
+        </form>
+        <article class="location-data">
+            <p>Category: {{this.category}}</p>
+            <p>Level: {{this.level}}</p>
+            <h3>Location-Name: {{this.city}}</h3>
+            <p>Author: {{this.creator}}</p>
+            <p>Created at: {{this.createdAt}}</p>
+            <a href="/location/detail/{{this._id}}" class="detail-button">Go to Detail</a>
+        </article>
+    </div>
+    {{/each}}
+</section>

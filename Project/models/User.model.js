@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+const Location = require("../models/Location.model")
 
 // TODO: Please make sure you edit the User model to whatever makes sense in this case
 const userSchema = new Schema(
@@ -24,7 +25,7 @@ const userSchema = new Schema(
       profileInfo: String,
       imageUrl: String,
       favorites:  {
-        type:Array,
+        type:[{ type: Schema.Types.ObjectId, ref: 'Location'}],
         default: []
     }, 
   },
