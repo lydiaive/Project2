@@ -43,6 +43,9 @@ app.use("/location", locationRoutes);
 const likeRoutes = require("./routes/like.routes");
 app.use("/like", likeRoutes);
 
+const mapRoutes = require("./routes/map.routes");
+app.use("/map", mapRoutes);
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 

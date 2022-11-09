@@ -48,7 +48,7 @@ router.get("/favorites", isLoggedIn, async (req, res) => {
         console.log(favDb)
         const locPopulate = await favDb.populate("favorites")
         console.log(locPopulate)
-        res.render("profile/favorites", {locPopulate});
+        res.render("location/favorites", {locPopulate});
     } catch (error) {
         console.log(error)
     }

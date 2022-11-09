@@ -1,0 +1,15 @@
+{{!-- Display the name and the img of the location --}}
+<h1>{{location.name}}</h1>
+<img src="{{location.img}}" class="location-img" alt="">
+
+{{!-- Display the map--}}
+<div class="location" id="map"></div>
+
+{{!-- Create hidden elements to store the display style of the map--}}
+<div class="hidden map-center"> {{mapCenter}}  </div>
+<div class="hidden map-zoom">  {{mapZoom}}  </div>
+
+{{!-- Create hidden element to stroe the position of the marker --}}
+<div class="hidden pos">  {{location.pos}}  </div>
+
+<div class="marker"></div>
