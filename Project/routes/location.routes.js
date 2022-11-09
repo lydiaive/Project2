@@ -5,15 +5,32 @@ const router = express.Router();
 const mongoose = require("mongoose");
 
 const Location = require("../models/Location.model")
+const User = require("../models/User.model")
+
 const isLoggedIn = require("../middleware/isLoggedIn");
 const fileUploader = require('../config/cloudinary.config');
 
 router.get("/", isLoggedIn, async(req, res) => {
   const user = req.session.currentUser
   try {
-    const locationDb = await Location.find()
+    const data = await Location.find()
+    const userDb = await User.findById(user)
+
+    const locationDb = data.map(el => {
+      return el
+    })
+
+    console.log(userDb.favorites)
+    //console.log(locationDb)
+
+    for (let i = 0; i < locationDb.length; i++) { 
+      if (userDb.favorites.includes(locationDb[i]._id)) {
+        locationDb[i].liked = true
+      } console.log(locationDb[i].liked)
+    }
+    console.log(locationDb, "verändert")
     res.render("location/main-feed", {locationDb, user});
-    console.log(locationDb)
+    
   } catch (error) {
     console.log(error)
   }

@@ -1,26 +1,38 @@
-
-
-
-
-
-
-<h1>main feed</h1>
+<h1>Spot your Spot</h1>
 
 <section class="location-container">
     {{#each locationDb}}
-    <div class="location-card">
-        <img src="{{this.photo}}" alt="location-image" class="location-img" width="250px">
-        <form action="/like/{{this._id}}" method="post">
-            <button><img src="/images/heart.png" alt="" width="40px"></button>
-        </form>
-        <article class="location-data">
-            <p>Category: {{this.category}}</p>
-            <p>Level: {{this.level}}</p>
-            <h3>Location-Name: {{this.city}}</h3>
-            <p>Author: {{this.creator}}</p>
-            <p>Created at: {{this.createdAt}}</p>
-            <a href="/location/detail/{{this._id}}" class="detail-button">Go to Detail</a>
-        </article>
-    </div>
+    <a href="/location/detail/{{this._id}}" class="detail-card">
+        <div class="location-card">
+            <div class="card-header">
+                <img class ="profile-img-listing" src="/images/blank-profile-picture.webp" alt="profile image">
+                <span>{{this.creator}}</span>
+            </div>
+            <div class="location-img-container">
+                <img src="{{this.photo}}" alt="location-image" class="location-img" width="250px">
+                {{#if locationDb.liked}}
+                <form action="/like/{{this._id}}" method="post">
+                    <button class="transparent-btn">
+                        <img class="icon-btn"src="/images/navbar-Icons/heart-clicked.png" alt="" width="40px">
+                        </button>
+                </form>
+                {{else}}
+                <form action="/like/{{this._id}}" method="post">
+                    <button class="transparent-btn">
+                        <img class="icon-btn"src="/images/navbar-Icons/heart-nonclicked.png" alt="" width="40px">
+                    </button>
+                </form>
+                {{/if}}
+            </div>
+            <article class="location-data">
+                <h3>Location-Name: {{this.city}}</h3>
+                <div class="card-footer">
+                    <p>Category: {{this.category}}</p>
+                    <p>Level: {{this.level}}</p>
+                </div>
+                {{!-- <p>Created at: {{this.createdAt}}</p> --}}
+            </article>
+        </div>
+    </a>
     {{/each}}
 </section>
