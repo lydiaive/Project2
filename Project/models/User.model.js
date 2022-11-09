@@ -23,7 +23,11 @@ const userSchema = new Schema(
     },
       fullName: String,
       profileInfo: String,
-      imageUrl: String,
+      imageUrl: {
+        type: String,
+        default: "/images/blank-profile-picture.webp"
+      },
+    
       favorites:  {
         type:[{ type: Schema.Types.ObjectId, ref: 'Location'}],
         default: []

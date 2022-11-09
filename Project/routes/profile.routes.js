@@ -14,8 +14,12 @@ router.get("/", isLoggedIn, async (req, res) => {
     const userId = req.session.currentUser._id
     try {
         const profile = await User.findById(userId)
-        console.log(profile)
-        res.render("profile/profile", profile);//CHECK IF IT WORKS  {layout:false}
+        const locationDb = await Location.find({creator: userId})
+        const count = locationDb.length
+        console.log(locationDb)
+        //console.log(profile)
+
+        res.render("profile/profile", {profile, locationDb, count: count});//CHECK IF IT WORKS  {layout:false}
     } catch (error) {
         console.log(error)
     }
@@ -48,7 +52,7 @@ router.get("/favorites", isLoggedIn, async (req, res) => {
         console.log(favDb)
         const locPopulate = await favDb.populate("favorites")
         console.log(locPopulate)
-        res.render("profile/favorites", {locPopulate});
+        res.render("location/favorites", {locPopulate});
     } catch (error) {
         console.log(error)
     }
