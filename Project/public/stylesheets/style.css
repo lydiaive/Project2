@@ -19,9 +19,6 @@ h1 {
 .h1-center{
   text-align: center;
 }
-
-
-
 /* .logo-img{
   width:40px;
   height:35px;
@@ -396,7 +393,7 @@ h1 {
 }
 .map {
   position: absolute;
-  top: 51px;
+  top: 0;
   bottom: 0;
   width: 100%;
 }
