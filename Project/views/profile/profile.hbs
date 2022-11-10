@@ -1,4 +1,4 @@
-<h1>My Profile</h1>
+<h1 class="h3style">My Profile</h1>
 
 <section class="user-info">
     <div class="profile-img-container">
@@ -27,8 +27,8 @@
                         </button>
                 </form>
                 {{else}}
-                <form action="/like/{{this._id}}" method="post">
-                    <button class="transparent-btn">
+                <form class ="form-class" action="/like/{{this._id}}" method="post">
+                    <button class="transparent-btn button-class">
                         <img class="icon-btn"src="/images/navbar-Icons/heart-nonclicked.png" alt="" width="40px">
                     </button>
                 </form>

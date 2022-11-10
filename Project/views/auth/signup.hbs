@@ -22,19 +22,19 @@
 <div id="form">
   <br>
   <br>
-  <h3><span>Sign</span> Up</h3>
-  <form action="/auth/signup" method="POST">
+  <h3 class="h3style"><span class="spanBlue">Sign</span> Up</h3>
+  <form class="form-class" action="/auth/signup" method="POST">
 
-    <label>
-      <input type="text" name="username" placeholder="Your username" />
+    <label class="label-class">
+      <input class="input-class" type="text" name="username" placeholder="Your username" />
     </label>
 
-    <label>
-      <input type="email" name="email" placeholder="Your email" />
+    <label class="label-class">
+      <input class="input-class" type="email" name="email" placeholder="Your email" />
     </label>
 
-    <label>
-      <input type="password" name="password" placeholder="Your password" />
+    <label class="label-class">
+      <input class="input-class" type="password" name="password" placeholder="Your password" />
     </label>
 
     <button class='sign-up-button' type="submit">Sign Up</button>
@@ -45,8 +45,9 @@
     {{/if}}
   </form>
 </div>
-<h1>Spot Your <span>Spot</span></h1>
-<h3>Share your favorite spots for your favorite sports and help others like you enjoy and have fun!</h3>
+<h1 class="h1-center">Spot Your <span class="spanBlue">Spot</span></h1>
+<h3  class="h3style">Share your favorite spots for your favorite sports and help others like you enjoy and have fun!</h3>
+<p class='h1-center'>Already have an account? <a href="/auth/login">log in</a></p>
 <br>
 <div class = 'logoImgFlex'>
 <img class="logoSize2" src="/images/logo.png" alt="logo">
