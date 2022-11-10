@@ -1,4 +1,4 @@
-<h1>My Profile</h1>
+<h1 class="h3style">My Profile</h1>
 
 <section class="user-info">
     <div class="profile-img-container">
@@ -6,8 +6,8 @@
     </div> 
     <article class="profile-data">
         <h2>{{profile.username}}</h2>
-        <p>Full Name: {{profile.fullName}}</p>
-        <p>About Me: {{profile.profileInfo}}</p>
+        <p>{{profile.fullName}}</p>
+        <p class ='bioText'>{{profile.profileInfo}}</p>
     </article>
     <a href="/profile/edit-profile" class="btn-reg">Edit Profile</a> 
     <a href="/location" class="btn-ghost">All Locations</a> 
@@ -27,8 +27,8 @@
                         </button>
                 </form>
                 {{else}}
-                <form action="/like/{{this._id}}" method="post">
-                    <button class="transparent-btn">
+                <form class ="form-class" action="/like/{{this._id}}" method="post">
+                    <button class="transparent-btn button-class">
                         <img class="icon-btn"src="/images/navbar-Icons/heart-nonclicked.png" alt="" width="40px">
                     </button>
                 </form>

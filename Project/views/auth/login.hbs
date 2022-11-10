@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
     <body>
-    <nav class='indexNav navFlex'>
+    {{!-- <nav class='indexNav navFlex'>
       <a href="/" class="logo"><img class="logo-img" src="/images/logo.png" alt="logo"></a>
       <img class="logo-img2 show-modal" src="/images/menu.png" alt="menuImg"></a>
       <section class="modal hidden"> 
@@ -18,33 +18,43 @@
          </div>
       </section>
     </nav>
-    <div class="overlay hidden"></div>
+    <div class="overlay hidden"></div> --}}
 
 
 <div id="login-form">
-  <h2>Log In</h2>
-  <form action="/auth/login" method="POST">
-
-    <label> Username
-      <input type="text" name="username" placeholder="Your username" />
+  <br>
+  <br>
+  <h3 class="h3style"><span class="spanBlue">Log</span> In</h3>
+  <form class ="form-class" action="/auth/login" method="POST">
+    <label class="label-class"> 
+      <input class="input-class" type="text" name="username" placeholder="Your username" />
     </label>
 
-    <label> Email
-      <input type="email" name="email" placeholder="Your email" />
+    <label class="label-class">
+      <input class="input-class" type="email" name="email" placeholder="Your email" />
     </label>
 
-    <label> Password
-      <input type="password" name="password" placeholder="Your password" />
+    <label class="label-class">
+      <input class="input-class" type="password" name="password" placeholder="Your password" />
     </label>
 
-    <button type="submit">Log In</button>
-
-
+    <button class='sign-up-button' type="submit">Log In</button>
     {{#if errorMessage}}
       <p class="error">{{errorMessage}}</p>
     {{/if}}
   </form>
 </div>
+<h1 class="h1-center">Spot Your <span class="spanBlue">Spot</span></h1>
+<h3 class="h3style">Check out secret spots like a true local and connect with people who share the same passions!</h3>
+<p class='h1-center'>Don't have an account? <a href="/auth/signup">sign up</a></p>
+<div class = 'logoImgFlex'>
+<img class="logoSize2" src="/images/logo.png" alt="logo">
+<img class="loginImg" src="/images/signupImg.png" alt="index Image">
+</div>
+{{!-- <img class="logoSize2" src="/images/logo.png" alt="logo">
+<img class="loginImg" src="/images/loginImg.png" alt="index Image"> --}}
+
+
 <script src="/js/script.js"></script>
   </body>
 </html>
