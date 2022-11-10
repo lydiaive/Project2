@@ -16,19 +16,19 @@ router.get("/", isLoggedIn, async(req, res) => {
     const data = await Location.find()
     const userDb = await User.findById(user)
 
-    const locationDb = data.map(el => {
+    let locationDb = data.map(el => {
       return el
     })
 
-    console.log(userDb.favorites)
+    //console.log(userDb.favorites)
     //console.log(locationDb)
 
     for (let i = 0; i < locationDb.length; i++) { 
       if (userDb.favorites.includes(locationDb[i]._id)) {
         locationDb[i].liked = true
-      } console.log(locationDb[i].liked)
-    }
-    console.log(locationDb, "verändert")
+      } console.log(locationDb[i])
+    } 
+    console.log(locationDb[0])
     res.render("location/main-feed", {locationDb, user});
     
   } catch (error) {
@@ -43,14 +43,16 @@ router.get("/create", isLoggedIn, async(req, res) => {
 
 router.post("/create", fileUploader.single('photo'), isLoggedIn, async (req, res) => {
   const user = req.session.currentUser
-  const {city, category, level, description}= req.body
+  const {city, category, level, description, coordinate}= req.body
   try {
+    console.log(req.body)
     const createLocation = await Location.create({
       creator: user._id,
       city, 
       category, 
       level, 
       description,
+      coordinate,
       photo: req.file.path
     })
     res.redirect("/location");

@@ -1,14 +1,26 @@
-<h1>location: detail</h1>
-{{#if user.username}}
-<p>{{user.username}} is logged in</p>
-{{/if}}
 <section class="detail-container">
-        <img src="{{locationDb.photo}}" alt="location-image" class="location-img" width="300px">
+    <div class="detail-img-container">
+        <img src="{{locationDb.photo}}" alt="location-image" class="location-img-detail">
+    </div>
         <article class="detail-data">
-            <h3>Location-Name: {{locationDb.city}}</h3>
-            <p>Description: {{locationDb.description}}</p>
+            <h2>Location-Name: {{locationDb.city}}</h2>
+            <div class="description-detail">
+                <img src="/images/navbar-Icons/quotation-start.png" alt="" class="quot quot-start">
+                <p> {{locationDb.description}}</p>
+                <img src="/images/navbar-Icons/quotation-end.png" alt="" class="quot quot-end">
+            </div>
             <p>Category: {{locationDb.category}}</p>
             <p>Level: {{locationDb.level}}</p>
-            <p>Author: {{locationDb.creator}}</p>
+            {{#if locationDb.creator.username}}
+            <div class="creator-footer">
+                <p>{{locationDb.creator.username}}</p>
+                <img src="{{lacation.creator.imageUrl}}" alt="">
+            </div>
+            {{else}}
+            <div class="creator-footer">
+                <p>{{locationDb.creator}}</p>
+                <img class ="profile-img-listing" src="/images/blank-profile-picture.webp" alt="">
+            </div>
+            {{/if}}
         </article>
 </section>

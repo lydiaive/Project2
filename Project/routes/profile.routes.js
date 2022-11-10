@@ -12,14 +12,16 @@ const isLoggedIn = require("../middleware/isLoggedIn");
 
 router.get("/", isLoggedIn, async (req, res) => {
     const userId = req.session.currentUser._id
+    const user = req.session.currentUser
     try {
         const profile = await User.findById(userId)
         const locationDb = await Location.find({creator: userId})
         const count = locationDb.length
-        console.log(locationDb)
+        //console.log(locationDb)
         //console.log(profile)
+        console.log(req.session.currentUser.imageUrl)
 
-        res.render("profile/profile", {profile, locationDb, count: count});//CHECK IF IT WORKS  {layout:false}
+        res.render("profile/profile", {profile, locationDb, user, count: count});//CHECK IF IT WORKS  {layout:false}
     } catch (error) {
         console.log(error)
     }
@@ -52,7 +54,7 @@ router.get("/favorites", isLoggedIn, async (req, res) => {
         console.log(favDb)
         const locPopulate = await favDb.populate("favorites")
         console.log(locPopulate)
-        res.render("location/favorites", {locPopulate});
+        res.render("location/favorites", {locPopulate, user});
     } catch (error) {
         console.log(error)
     }

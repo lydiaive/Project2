@@ -12,25 +12,39 @@
   </head>
 
   <body>
-    <nav class='indexNav navFlex'>
-      {{!-- <a href="/" class="logo"><img class="profileImage" src="/images/profilePrototype.png" alt="logo"></a> --}}
-      <img class="profileImage" src="/images/profilePrototype.png" alt="logo">
-      <img class="show-modal" src="/images/menu.png" alt="menuImg"></a>
+    <nav class=' navFlex'>
+      <div class="indexNav">
+        <img class="show-modal" src="/images/menuebar-white.png" alt="menuImg"></a>
+      </div>
       <section class="modal hidden"> 
         <button class="close-modal">x</button>
-        <div class="linkFlex">
-          <a href="/location">Main Feed</a>
-          <a href="/location/create">Create New Location</a>
-          <a href="/map">Location Map</a>
-          <a href="/profile">Profile</a>
-          <a href="/profile/edit-profile">Edit Profile</a>
-          <a href="/profile/posts">My Posts</a>
-          <a href="/profile/favorites">Favorites</a>
-          <a href="/location/my-locations">My Locations</a>
-           <form action="/auth/logout" method="post">
-            <button class="navLogOutBtn">Log Out</button>
-           </form>
-         </div>
+        <ul class="linkFlex">
+          <li class="nav-profile">
+            <div class="profile-img-container">
+              <a href="/profile"><img src="{{user.imageUrl}}" alt="" class="profile-img"></a>
+            </div> 
+            <p>{{user.username}}</p>
+          </li>
+          
+          <li class="nav-item">
+            <img src="/images/navbar-Icons/home.webp" alt="" class="nav-icon">
+            <a href="/location">Location Feed</a></li>
+          <li class="nav-item">
+            <img src="/images/navbar-Icons/create-location.webp" alt="" class="nav-icon">
+            <a href="/location/create">Add New Location</a></li>
+          <li class="nav-item">
+            <img src="/images/navbar-Icons/location-on-map.png" alt="" class="nav-icon">
+            <a href="/map">Location Map</a></li>
+          <li class="nav-item">
+            <img src="/images/navbar-Icons/heart-nav.png" alt="" class="nav-icon">
+            <a href="/profile/favorites">Favorites</a></li>
+          <li class="nav-item logout-container">
+            <img src="/images/navbar-Icons/log-out.png" alt="" class="nav-icon logout-icon">
+            <form action="/auth/logout" method="post">
+              <button class="navLogOutBtn">Log Out</button>
+            </form>
+          </li>
+         </ul>
       </section>
     </nav>
       <div class="overlay hidden"></div>
