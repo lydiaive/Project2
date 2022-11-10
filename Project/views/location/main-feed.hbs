@@ -9,15 +9,25 @@
                 <span>{{this.creator}}</span>
             </div>
             <div class="location-img-container">
-                <img src="{{this.photo}}" alt="location-image" class="location-img" width="250px">
+                <img src="{{this.photo}}" alt="location-image" class="location-img">
                 {{#if locationDb.liked}}
-                <form action="/like/{{this._id}}" method="post">
+                <form id="dislike-btn" class="dislike-btn" action="/like/{{this._id}}/delete" method="post">
                     <button class="transparent-btn">
                         <img class="icon-btn"src="/images/navbar-Icons/heart-clicked.png" alt="" width="40px">
                         </button>
                 </form>
+                <form id="like-btn" class="like-btn hidden" action="/like/{{this._id}}" method="post">
+                    <button class="transparent-btn">
+                        <img class="icon-btn"src="/images/navbar-Icons/heart-nonclicked.png" alt="" width="40px">
+                    </button>
+                </form>
                 {{else}}
-                <form action="/like/{{this._id}}" method="post">
+                <form id="dislike-btn" class="dislike-btn hidden" action="/like/{{this._id}}/delete" method="post">
+                    <button class="transparent-btn">
+                        <img class="icon-btn"src="/images/navbar-Icons/heart-clicked.png" alt="" width="40px">
+                        </button>
+                </form>
+                <form  id="like-btn" class="like-btn" action="/like/{{this._id}}" method="post">
                     <button class="transparent-btn">
                         <img class="icon-btn"src="/images/navbar-Icons/heart-nonclicked.png" alt="" width="40px">
                     </button>

@@ -42,6 +42,25 @@ router.post("/:locationId/delete", isLoggedIn, async (req, res) => {
 
         const updateFav = await User.findByIdAndUpdate(user._id, { $pull: { favorites: locationId} })
         console.log(updateFav)
+    } catch (error) {
+        console.log(error)
+    } 
+});
+
+router.post("/:locationId/delete-fave", isLoggedIn, async (req, res) => {
+    const user = req.session.currentUser
+    const locationId = req.params.locationId
+    console.log(locationId)
+
+    try {
+        /* const likeDb = await Like.findOneAndDelete(
+            {userId: user._id,
+            locationId: locationId}
+        )
+        console.log('Like deleted') */
+
+        const updateFav = await User.findByIdAndUpdate(user._id, { $pull: { favorites: locationId} })
+        console.log(updateFav)
         res.redirect("/profile/favorites")
     } catch (error) {
         console.log(error)
