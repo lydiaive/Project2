@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
     <body>
-    <nav class='indexNav navFlex'>
+    {{!-- <nav class='indexNav navFlex'>
       <a href="/" class="logo"><img class="logo-img" src="/images/logo.png" alt="logo"></a>
       <img class="logo-img2 show-modal" src="/images/menu.png" alt="menuImg"></a>
       <section class="modal hidden"> 
@@ -18,33 +18,40 @@
          </div>
       </section>
     </nav>
-    <div class="overlay hidden"></div>
+    <div class="overlay hidden"></div> --}}
 
 
 <div id="login-form">
-  <h2>Log In</h2>
+  <br>
+  <br>
+  <h3><span>Log</span> In</h3>
   <form action="/auth/login" method="POST">
-
-    <label> Username
+    <label> 
       <input type="text" name="username" placeholder="Your username" />
     </label>
-
-    <label> Email
+    <label>
       <input type="email" name="email" placeholder="Your email" />
     </label>
-
-    <label> Password
+    <label>
       <input type="password" name="password" placeholder="Your password" />
     </label>
-
-    <button type="submit">Log In</button>
-
-
+    <button class='sign-up-button' type="submit">Log In</button>
     {{#if errorMessage}}
       <p class="error">{{errorMessage}}</p>
     {{/if}}
   </form>
 </div>
+<h1>Spot Your <span>Spot</span></h1>
+<h3>Check out secret spots like a true local and connect with people who share the same passions!</h3>
+<br>
+<div class = 'logoImgFlex'>
+<img class="logoSize2" src="/images/logo.png" alt="logo">
+<img class="loginImg" src="/images/signupImg.png" alt="index Image">
+</div>
+{{!-- <img class="logoSize2" src="/images/logo.png" alt="logo">
+<img class="loginImg" src="/images/loginImg.png" alt="index Image"> --}}
+
+
 <script src="/js/script.js"></script>
   </body>
 </html>

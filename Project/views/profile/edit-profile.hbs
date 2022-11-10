@@ -1,17 +1,23 @@
-<h1>edit Profile</h1>
+<h1>Edit <span>Profile</span></h1>
 
 <form action="/profile/img-upload" method="post" enctype="multipart/form-data"> 
     
-    <label for="fullName">Full Name:</label>
-    <input type="text" name="fullName" id="fullName" placeholder="firstname lastname">
+    <label for="fullName"></label>
+    <input type="text" name="fullName" id="fullName" placeholder="Name">
 
-    <label for="profileInfo">Full Name:</label>
-    <textarea id="profileInfo" name="profileInfo" rows="4" cols="50" placeholder="Tell something about you!"></textarea>
+    <label for="profileInfo"></label>
+    <textarea id="profileInfo" name="profileInfo" rows="4" cols="23.4" placeholder="About you!"></textarea>
     
     
-    <label for="profileImg">Update Profile Image:<label>Image:
-    <input type="file" name="profileImg" />
+    <label for="profileImg">Image:<label>
+    <input type="file" name="profileImg"/>
 
 
-    <button type="submit">Edit User Information</button>
+    <button class='sign-up-button' type="submit">Edit User</button>
 </form>
+<h1>Spot Your <span>Spot</span></h1>
+<br>
+<div class = 'logoImgFlex'>
+<img class="logoSize2" src="/images/logo.png" alt="logo">
+<img class="loginImg" src="/images/signupImg.png" alt="index Image">
+</div>

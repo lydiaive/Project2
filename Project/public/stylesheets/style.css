@@ -8,18 +8,19 @@ body {
 a {
   color: #00b7ff;
 }
-
-h1 {
-  padding-bottom: 15px;
+span{
+  color: #00b7ff;
 }
-
-
+h1 {
+  padding-bottom: 0px;
+  text-align: center;
+}
 /* NAVBAR STYLINGS: */
 .linkFlex > a{
   text-decoration: none;
 }
 .indexNav{
-  background-color:#D3DEDC;
+  background-color:#33D0FF;
   height: 35px;
 }
 .logo-img{
@@ -37,19 +38,21 @@ h1 {
   border-radius: 50%;
 }
 .sign-up-button{
-  background: #43a3e6;
-  border: 1px solid #43a3e6;
-  border-radius: 4px;
+  background: #33D0FF;
+  border: 1px solid #33D0FF;
+  border-radius: 21px;
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-size: 14px;
-  padding: 8px 16px;
+  font-size: 1.2rem;
+  padding: 5px 30px;
+  margin: 10px 0;
   text-decoration: none;
   text-transform: uppercase;
   transition: 0.3s ease background;
   width: 100%;
   text-align: center;
+  line-height: 2rem;
 }
 .sign-up-button:hover {
   background: #7dbfef;
@@ -57,20 +60,22 @@ h1 {
   transition: 0.3s ease background;
 }
 .log-in-button{
-  background: #43a3e6;
-  border: 1px solid #43a3e6;
-  border-radius: 4px;
+  background: #33D0FF;
+  border: 1px solid #33D0FF;
+  border-radius: 21px;
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-size: 14px;
-  padding: 8px 16px;
+  font-size: 1.2rem;
+  padding: 5px 30px;
+  margin: 10px 0;
   text-decoration: none;
   text-transform: uppercase;
   transition: 0.3s ease background;
   width: 100%;
+  text-align: center;
+  line-height: 2rem;
 } 
-
 .log-in-button:hover {
   background: #7dbfef;
   color: #fff;
@@ -82,7 +87,7 @@ h1 {
     flex-wrap: wrap; 
     justify-content: center;
     gap:1px;
-    padding:50px 100px;
+    padding:10px 100px 30px 100px;
     text-align: center;
 }
 .navFlex{
@@ -92,7 +97,12 @@ h1 {
     gap:270px;
     padding:8px 8px;
 }
-
+.logoImgFlex{
+    display: flex;
+    flex-direction: column; 
+    flex-wrap: nowrap; 
+    align-items: center;
+}         
 .show-modal{
   cursor: pointer;
 }
@@ -146,6 +156,64 @@ h1 {
   color: #00b7ff;
   text-decoration: none;
   cursor: pointer;
+}
+#indexImg{
+  width: 710px;
+}
+.loginImg{
+  width: 400px;
+}
+.bioText{
+  color:grey;
+}
+.logoSize{
+  width:80px;
+  padding: 20px 0px;
+}
+.logoSize2{
+  width:70px;
+  padding: 0px 0px;
+
+}
+h3{
+  text-align: center;
+  padding: 0px 50px;
+}
+
+/* FORMS STYLE */
+form {
+  margin: 30px auto;
+  width: 200px;
+}
+form label {
+  color: #666;
+  display: inline-block;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+form input{
+  box-sizing: border-box;
+  font-size: 14px;
+  outline: 0;
+  padding: 4px;
+  width: 100%;
+  margin-bottom: 20px;
+  /* border:thin; */
+}
+form button {
+  background: #33D0FF;
+  border: 1px solid #33D0FF;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.3s ease background;
+  width: 100%;
 }
 
 /* LOCATION LISTING STYLINGS: */
@@ -262,7 +330,7 @@ h1 {
 .btn-reg {
   text-decoration: none;
   color: white;
-  background-color: blue;
+  background-color:#33D0FF;
   text-transform: uppercase;
   border-radius: 21px;
   line-height: 2rem;
@@ -272,7 +340,7 @@ h1 {
 }
 .btn-ghost {
   text-decoration: none;
-  color: blue;
+  color:#33D0FF;
   background-color: transparent;
   text-transform: uppercase;
   border-radius: 21px;
