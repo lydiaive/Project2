@@ -13,6 +13,7 @@ const isLoggedIn = require("../middleware/isLoggedIn");
 router.get("/", isLoggedIn, async (req, res) => {
     const userId = req.session.currentUser._id
     const user = req.session.currentUser
+    console.log(user.imageUrl)
     try {
         const profile = await User.findById(userId)
         const locationDb = await Location.find({creator: userId})
