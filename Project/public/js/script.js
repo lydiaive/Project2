@@ -1,7 +1,35 @@
 // https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event
 document.addEventListener("DOMContentLoaded", () => {
   console.log("project2 JS imported successfully!");
-});
+
+
+  
+  const likeBtn = document.getElementsByClassName("like-btn")
+  console.log(likeBtn)
+
+  const disLikeBtn = document.getElementsByClassName("dislike-btn")
+  console.log(disLikeBtn)
+  
+
+  for (let i = 0; i < likeBtn.length; i++) {
+    
+    let button = likeBtn[i];
+    let buttondislike = disLikeBtn[i]
+
+    const like = () => {
+      button.classList.add("hidden")
+      buttondislike.classList.remove("hidden")
+    }
+    button.addEventListener('click', like);
+
+    const dislike = () => {
+      button.classList.remove("hidden")
+      buttondislike.classList.add("hidden")
+    }
+    buttondislike.addEventListener('click', dislike);
+  
+};
+
 
 const modal = document.querySelector(".modal");
 const closeButton = document.querySelector(".close-modal")
@@ -28,4 +56,6 @@ closeButton.addEventListener("click", () => {
 
 overlay.addEventListener("click", () => {
   closeModal();
+})
+
 })

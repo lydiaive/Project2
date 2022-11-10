@@ -29,7 +29,7 @@ h1 {
   height:40px;
   padding:0px 8px;
   border-radius: 50%; */
-}
+
 .sign-up-button{
   background: #43a3e6;
   border: 1px solid #43a3e6;
@@ -198,10 +198,6 @@ h1 {
   
 }
 
-.location-card {
-
-}
-
 .card-header {
   margin: 0 15px;
 }
@@ -242,6 +238,7 @@ h1 {
 
 .icon-btn {
   border-radius: 10px;
+  width: 40px;
 }
 
 .location-data {
@@ -320,7 +317,7 @@ h1 {
 }
 .map {
   position: absolute;
-  top: 51px;
+  top: 0;
   bottom: 0;
   width: 100%;
 }
