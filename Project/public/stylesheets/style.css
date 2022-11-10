@@ -19,22 +19,12 @@ h1 {
 .h1-center{
   text-align: center;
 }
+.noscroll {
+  margin: 0; 
+  height: 100%; 
+  overflow-y: hidden
+} 
 
-
-
-/* .logo-img{
-  width:40px;
-  height:35px;
-  padding:0px 8px;
-}
-.logo-img2{
-  width:35px;
-}
-.profileImage{
-  width:40px;
-  height:40px;
-  padding:0px 8px;
-  border-radius: 50%; */
 
 .sign-up-button{
   background: #33D0FF;
@@ -48,16 +38,11 @@ h1 {
   margin: 10px 0;
   text-decoration: none;
   text-transform: uppercase;
-  /* transition: 0.3s ease background; */
   width: 100%;
   text-align: center;
   line-height: 2rem;
 }
-/* .sign-up-button:hover {
-  background: #7dbfef;
-  color: #fff;
-  transition: 0.3s ease background;
-} */
+
 .log-in-button{
   background: #33D0FF;
   border: 1px solid #33D0FF;
@@ -75,11 +60,7 @@ h1 {
   text-align: center;
   line-height: 2rem;
 } 
-/* .log-in-button:hover {
-  background: #7dbfef;
-  color: #fff;
-  transition: 0.3s ease background;
-} */
+
 .signUpLogInFlex{
     display: flex;
     flex-direction: ro; 
@@ -130,13 +111,11 @@ h1 {
 .modal {
   position: absolute;
   top: 0px;
-  left:0%;
-  /* transform: translate(-50%, -50%); */
+  left:0px;
   width: 55%;
   height:100vh;
   background-color: white;
   padding: 6rem 2rem;
-  border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 100;
 }
@@ -167,11 +146,17 @@ h1 {
 
 .linkFlex li {
   list-style: none;
-
 }
+
+.nav-link {
+  display:flex;
+  align-items: center;
+  gap: 5px;
+} 
 .nav-item{
   padding: 5px 0 0 30px;
 }
+
 .nav-icon {
   height: 20px;
 }

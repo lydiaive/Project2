@@ -34,16 +34,19 @@ document.addEventListener("DOMContentLoaded", () => {
 const modal = document.querySelector(".modal");
 const closeButton = document.querySelector(".close-modal")
 const btns = document.querySelector(".show-modal")
-const overlay = document.querySelector(".overlay");
+const overlay = document.querySelector(".overlay")
+const body = document.querySelector("body")
 
 const openModal = () => {
   modal.classList.remove("hidden")
   overlay.classList.remove("hidden")
+  body.classList.add("noscroll")
 }
 
 const closeModal = () => {
   modal.classList.add("hidden")
   overlay.classList.add("hidden")
+  body.classList.remove("noscroll")
 }
 
 btns.addEventListener("click", () =>{

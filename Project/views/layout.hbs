@@ -11,7 +11,7 @@
       <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
   </head>
 
-  <body>
+  <body class="">
     <nav class=' navFlex'>
       <div class="indexNav">
         <img class="show-modal" src="/images/menuebar-white.png" alt="menuImg"></a>
@@ -26,18 +26,18 @@
             <p>{{user.username}}</p>
           </li>
           
-          <li class="nav-item">
+          <li class="nav-item nav-link">
             <img src="/images/navbar-Icons/home.webp" alt="" class="nav-icon">
             <a href="/location">Location Feed</a></li>
-          <li class="nav-item">
+          <li class="nav-item nav-link">
             <img src="/images/navbar-Icons/create-location.webp" alt="" class="nav-icon">
             <a href="/location/create">Add New Location</a></li>
-          <li class="nav-item">
+          <li class="nav-item nav-link">
             <img src="/images/navbar-Icons/location-on-map.png" alt="" class="nav-icon">
             <a href="/map">Location Map</a></li>
-          <li class="nav-item">
+          <li class="nav-item nav-link">
             <img src="/images/navbar-Icons/heart-nav.png" alt="" class="nav-icon">
-            <a href="/profile/favorites">Favorites</a></li>
+            <a href="/profile/favorites nav-link">Favorites</a></li>
           <li class="nav-item logout-container">
             <img src="/images/navbar-Icons/log-out.png" alt="" class="nav-icon logout-icon">
             <form action="/auth/logout" method="post">
