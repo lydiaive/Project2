@@ -86,7 +86,13 @@ router.post("/create", fileUploader.single('photo'), isLoggedIn, async (req, res
     try {
       const locationDb = await Location.findById(id).populate("creator")
       console.log(locationDb)
-      res.render("location/spot-detail", {locationDb, user});
+      const userDb = await User.findById(user)
+      const mapCenter = [2.1686, 41.3874]//note this API takes cooridnate the other way around. Its foxed later on buty keep in mind
+      const mapZoom = 11
+  
+      const littleMapDb = await Location.find()
+    console.log(littleMapDb)
+      res.render("location/spot-detail", {locationDb, user, littleMapDb, mapCenter, mapZoom});
     } catch (error) {
       console.log(error)
     }
