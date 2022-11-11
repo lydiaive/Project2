@@ -12,19 +12,19 @@ Your favorite spots can be liked and bookmarked to your favorites-list.
 
 As a creator or consumer of the app you are also able to share some information about yourself on your profile-page.
 
-![Home](/Project/public/images/readme/Bildschirmfoto32.png)
+![Home](/Project/public/images/readme/Bildschirmfoto32.png =200x)
 
-![Main-Feed](/Project/public/images/readme/Bildschirmfoto08.png)
+![Main-Feed](/Project/public/images/readme/Bildschirmfoto08.png =200x)
 
-![Navigation](/Project/public/images/readme/Bildschirmfoto.png)
+![Navigation](/Project/public/images/readme/Bildschirmfoto.png =200x)
 
-![Profile](/Project/public/images/readme/Bildschirmfoto46.png)
+![Profile](/Project/public/images/readme/Bildschirmfoto46.png =200x)
 
-![Location-Detail](/Project/public/images/readme/Bildschirmfoto03.png)
+![Location-Detail](/Project/public/images/readme/Bildschirmfoto03.png =200x)
 
-![Map](/Project/public/images/readme/Bildschirmfoto24.png)
+![Map](/Project/public/images/readme/Bildschirmfoto24.png =200x)
 
-![Favorit-List](/Project/public/images/readme/Bildschirmfoto47.png)
+![Favorit-List](/Project/public/images/readme/Bildschirmfoto47.png =200x)
 
 ### Presentation:
 [Slides](https://slides.com/molibi01/minimal/fullscreen) 
