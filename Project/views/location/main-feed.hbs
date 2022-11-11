@@ -10,7 +10,7 @@
             </div>
             <div class="location-img-container">
                 <img src="{{this.photo}}" alt="location-image" class="location-img">
-                {{#if locationDb.liked}}
+                {{#if this.liked}}
                 <form id="dislike-btn" class="dislike-btn" action="/like/{{this._id}}/delete" method="post">
                     <button class="transparent-btn">
                         <img class="icon-btn"src="/images/navbar-Icons/heart-clicked.png" alt="" width="40px">

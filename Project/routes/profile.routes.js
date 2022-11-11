@@ -15,11 +15,11 @@ router.get("/", isLoggedIn, async (req, res) => {
     const user = req.session.currentUser
     try {
         const profile = await User.findById(userId)
-        const locationDb = await Location.find({creator: userId})
+        const locationDb = await Location.find({city: "Bärenbrunnerhof"})
         const count = locationDb.length
-        //console.log(locationDb)
-        //console.log(profile)
-        console.log(req.session.currentUser.imageUrl)
+        console.log(locationDb.ObjectId)
+        console.log(locationDb.creator)
+        console.log(userId)
 
         res.render("profile/profile", {profile, locationDb, user, count: count});//CHECK IF IT WORKS  {layout:false}
     } catch (error) {
