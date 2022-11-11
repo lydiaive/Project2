@@ -109,9 +109,7 @@ h1 {
   background: none;
 }
 .modal {
-  position: absolute;
-  top: 0px;
-  left:0px;
+  position: fixed;
   width: 55%;
   height:100vh;
   background-color: white;

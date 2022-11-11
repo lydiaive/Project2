@@ -16,8 +16,27 @@ router.get("/", isLoggedIn, async (req, res) => {
     console.log(user.imageUrl)
     try {
         const profile = await User.findById(userId)
-        const locationDb = await Location.find({creator: userId})
-        const count = locationDb.length
+        const data = await Location.find({creator: userId})
+        const count = data.length
+
+        const locationDb = data.map(el => {
+            return {
+              _id: el._id,
+              creator: el.creator,
+              city: el.city,
+              category: el.category,
+              level: el.level,
+              photo: el.photo,
+            }
+          })
+      
+          for (let i = 0; i < locationDb.length; i++) { 
+            if (profile.favorites.includes(locationDb[i]._id)) {
+              locationDb[i].liked = true
+              //console.log(locationDb[i])
+            } //console.log("Zwischentest", locationDb[i].liked)
+          } 
+          console.log(locationDb)
 
         res.render("profile/profile", {profile, locationDb, user, count: count});//CHECK IF IT WORKS  {layout:false}
     } catch (error) {
