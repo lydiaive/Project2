@@ -3,7 +3,7 @@ const { Schema, model } = require("mongoose");
 const locationSchema = new Schema({
     //creator take user id pupulate 
     
-    creator:String, 
+    creator:{ type: Schema.Types.ObjectId, ref: 'User'}, 
     city:String,
     category:{
         type:String,

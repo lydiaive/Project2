@@ -16,17 +16,29 @@ router.get("/", isLoggedIn, async(req, res) => {
     const data = await Location.find()
     const userDb = await User.findById(user)
 
-    let locationDb = data.map(el => {
-      return el
-    })
+    let result = []
 
-    //console.log(userDb.favorites)
-    //console.log(locationDb)
+    for (let i = 0; i < data.length; i++) {
+      const obj = await data[i].populate("creator")
+      result.push(obj)
+    }
+    console.log(result)
+
+    const locationDb = result.map(el => {
+      return {
+        _id: el._id,
+        city: el.city,
+        category: el.category,
+        level: el.level,
+        photo: el.photo,
+      }
+    })
 
     for (let i = 0; i < locationDb.length; i++) { 
       if (userDb.favorites.includes(locationDb[i]._id)) {
         locationDb[i].liked = true
-      } console.log(locationDb[i])
+        console.log(locationDb[i])
+      } console.log("Zwischentest", locationDb[i].liked)
     } 
     console.log(locationDb[0])
     res.render("location/main-feed", {locationDb, user});
@@ -65,7 +77,8 @@ router.post("/create", fileUploader.single('photo'), isLoggedIn, async (req, res
     const id = req.params.id
     const user = req.session.currentUser
     try {
-      const locationDb = await Location.findById(id)
+      const locationDb = await Location.findById(id).populate("creator")
+      console.log(locationDb)
       res.render("location/spot-detail", {locationDb, user});
     } catch (error) {
       console.log(error)

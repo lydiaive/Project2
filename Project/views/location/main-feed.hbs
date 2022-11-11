@@ -5,8 +5,8 @@
     <a href="/location/detail/{{this._id}}" class="detail-card">
         <div class="location-card">
             <div class="card-header">
-                <img class ="profile-img-listing" src="/images/blank-profile-picture.webp" alt="profile image">
-                <span>{{this.creator}}</span>
+                <img class ="profile-img-listing" src="{{this.creator.imageUrl}}" alt="profile image">
+                <span>{{this.creator.username}}</span>
             </div>
             <div class="location-img-container">
                 <img src="{{this.photo}}" alt="location-image" class="location-img">

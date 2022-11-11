@@ -11,16 +11,9 @@
             </div>
             <p>Category: {{locationDb.category}}</p>
             <p>Level: {{locationDb.level}}</p>
-            {{#if locationDb.creator.username}}
             <div class="creator-footer">
                 <p>{{locationDb.creator.username}}</p>
-                <img src="{{lacation.creator.imageUrl}}" alt="">
+                <img class="profile-img-listing" src="{{locationDb.creator.imageUrl}}" alt="">
             </div>
-            {{else}}
-            <div class="creator-footer">
-                <p>{{locationDb.creator}}</p>
-                <img class ="profile-img-listing" src="/images/blank-profile-picture.webp" alt="">
-            </div>
-            {{/if}}
         </article>
 </section>

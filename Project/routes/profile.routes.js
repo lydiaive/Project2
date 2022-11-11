@@ -28,7 +28,8 @@ router.get("/", isLoggedIn, async (req, res) => {
   });
 
 router.get("/edit-profile", isLoggedIn, (req, res) => {
-    res.render("profile/edit-profile");
+    const user = req.session.currentUser
+    res.render("profile/edit-profile", {user});
 });
 
 router.post('/img-upload', fileUploader.single('profileImg'), async (req, res) => {
@@ -51,9 +52,17 @@ router.get("/favorites", isLoggedIn, async (req, res) => {
  const user = req.session.currentUser
     try {
         const favDb = await User.findById(user._id)
-        console.log(favDb)
-        const locPopulate = await favDb.populate("favorites")
-        console.log(locPopulate)
+        const data = await favDb.populate("favorites")
+        //console.log(data.favorites)
+        let locPopulate =[]
+
+        for (let i = 0; i < data.favorites.length; i++) {
+            const obj = await data.favorites[i].populate("creator")
+            locPopulate.push(obj)
+            //console.log("Result-Logging", result)
+            //console.log(obj)
+          }
+          console.log(locPopulate)
         res.render("location/favorites", {locPopulate, user});
     } catch (error) {
         console.log(error)
