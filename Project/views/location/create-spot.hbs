@@ -1,34 +1,43 @@
-<h1>create location</h1>
+<br>
+<h1 class ="h1-center"><span class="spanBlue">Create</span> Location</h1>
 
-<form action="/location/create" class="create-location" method="post" enctype="multipart/form-data">
-    <label for="city">Location Name:</label>
-    <input type="text" name="city" id="city">
+<form class="form-class" action="/location/create" class="create-location" method="post" enctype="multipart/form-data">
+    <label class="label-class" for="city"></label>
+    <input class="input-class" type="text" name="city" id="city" placeholder="Location Name">
 
-    <label for="description">Location Description:</label>
-    <textarea id="description" name="description" rows="4" cols="50" placeholder="Describe this location..."></textarea>
+    <label for="description"></label>
+    <textarea id="description" name="description" rows="4" cols="23.3" placeholder="Describe this location..."></textarea>
 
-    <label for="city">Latitude:</label>
-    <input type="text" name="coordinate" id="coordinate">
+    <label class="label-class" for="city"></label>
+    <input class="input-class" type="text" name="coordinate" id="coordinate" placeholder="Latitude">
 
-    <label for="city">Longitude:</label>
-    <input type="text" name="coordinate" id="coordinate">
+    <label class="label-class" for="city"></label>
+    <input class="input-class" type="text" name="coordinate" id="coordinate" placeholder="Longitude">
 
-    <label for="category">Choose a Sports Category:</label>
+    <label class="label-class" for="category"></label>
     <select name="category" id="category">
         <option value="Surf">Surf</option>
         <option value="Climbing">Climbing</option>
     </select>
 
-    <label for="level">Choose a Level of Difficulty:</label>
+    <label class="label-class" for="level"></label>
     <select name="level" id="level">
         <option value="Beginner">Beginner</option>
         <option value="Intermediate">Intermediate</option>
         <option value="Expert">Expert</option>
     </select>
 
-    <label for="photo">Update Location Image:<label>
-    <input type="file" name="photo" />
+    <label class="label-class" for="photo"><label>
+    <input class="input-class" type="file" name="photo" />
 
-    <button type="submit">Create</button>
+    <button class='sign-up-button' type="submit">Create</button>
 
 </form>
+
+  </div>
+  <br>
+  <br>
+    <div class = 'logoImgFlex'>
+    <img class="logoSize2" src="/images/logo.png" alt="logo">
+    <img class="loginImg" src="/images/signupImg.png" alt="index Image">
+    </div>
