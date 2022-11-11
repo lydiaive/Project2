@@ -7,15 +7,14 @@
     </div> 
     <article class="profile-data">
         <h2>{{profile.username}}</h2>
-        <p>{{profile.fullName}}</p>
+        <p class="subheadline-profile">{{profile.fullName}}</p>
         <p class ='bioText'>{{profile.profileInfo}}</p>
     </article>
     <a href="/profile/edit-profile" class="btn-reg">Edit Profile</a> 
-    <a href="/location" class="btn-ghost">All Locations</a> 
+    <a href="/location" class="btn-ghost">Main Feed</a> 
 </section>
-
+<h2 class="h3style">My Locations ({{count}})</h2>
 <section class="location-container">
-    <h2>My Locations ({{count}})</h2>
     {{#each locationDb}}
     <a href="/location/detail/{{this._id}}" class="detail-card">
         <div class="location-card">
@@ -38,8 +37,8 @@
             <article class="location-data">
                 <h3>Location-Name: {{this.city}}</h3>
                 <div class="card-footer">
-                    <p>Category: {{this.category}}</p>
-                    <p>Level: {{this.level}}</p>
+                    <p>Category: <span>{{this.category}}</span></p>
+                    <p>Level: <span>{{this.level}}</span></p>
                 </div>
                 {{!-- <p>Created at: {{this.createdAt}}</p> --}}
             </article>

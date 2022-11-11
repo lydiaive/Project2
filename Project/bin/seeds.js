@@ -5,7 +5,7 @@ const MONGO_URI = "mongodb://localhost:27017/project2"
 
 const locations = [
   {
-    creator:"636d137acd2dd5a97f71f8cc", // THIS SHOULD BE AUTOMATICALLY FILLED UP WITH THE USERS USERNAME
+    creator:"636e07ff57af442b371d9dd3", // THIS SHOULD BE AUTOMATICALLY FILLED UP WITH THE USERS USERNAME
     city: "Barcelona",
     category:"Surf",
     level: "Beginner",
@@ -15,7 +15,7 @@ const locations = [
     photo:'https://www.rippingmag.com/wp-content/uploads/M9-7.jpg'
   },
   {
-    creator:"636d137acd2dd5a97f71f8cd",
+    creator:"636e07ff57af442b371d9dd5",
     city: "Barcelona",
     category:"Surf",
     level: "Beginner",
@@ -25,7 +25,7 @@ const locations = [
     photo:'https://www.telegraph.co.uk/content/dam/news/2020/12/01/TELEMMGLPICT000244065877_trans_NvBQzQNjv4BqIANxl8wJr51_oZCB9m_DiU20SVfcOzT7GCr_e6NH-Ws.jpeg?imwidth=960'
   },
   {
-    creator:"636d137acd2dd5a97f71f8cd", // THIS SHOULD BE AUTOMATICALLY FILLED UP WITH THE USERS USERNAME
+    creator:"636e07ff57af442b371d9dd4", // THIS SHOULD BE AUTOMATICALLY FILLED UP WITH THE USERS USERNAME
     city: "Zarautz",
     category:"Surf",
     level: "Intermediate",
@@ -35,7 +35,7 @@ const locations = [
     photo:'https://images.rove.me/w_740,q_85/cwxbs5shoinuicmzykcy/basque-country-zarautz-surfing.jpg'
   },
   {
-    creator:"636d137acd2dd5a97f71f8cc",
+    creator:"636e07ff57af442b371d9dd3",
     city: "San Sebastian",
     category:"Surf",
     level: "Intermediate",
@@ -45,7 +45,7 @@ const locations = [
     photo:'https://www.singlequiver.com/enelpico/wp-content/uploads/2021/02/zurriola-surf-1.jpg'
   },
   {
-    creator:"636d137acd2dd5a97f71f8cd", // THIS SHOULD BE AUTOMATICALLY FILLED UP WITH THE USERS USERNAME
+    creator:"636e07ff57af442b371d9dd4", // THIS SHOULD BE AUTOMATICALLY FILLED UP WITH THE USERS USERNAME
     city: "Sitges",
     category:"Surf",
     level: "Beginner",
@@ -55,7 +55,7 @@ const locations = [
     photo:'https://www.sitgesanytime.com/media/site1/cache/images/platja-aiguadol.jpeg'
   },
   {
-    creator:"636d137acd2dd5a97f71f8cb",
+    creator:"636e07ff57af442b371d9dd5",
     city: "Siurana",
     category:"Climbing",
     level: "Intermediate",
@@ -65,7 +65,7 @@ const locations = [
     photo:'https://pbs.twimg.com/media/FE0Y9jOXoAYq8ZM?format=jpg&name=medium'
   },
   {
-    creator:"636d137acd2dd5a97f71f8cc",
+    creator:"636e07ff57af442b371d9dd3",
     city: "Siurana",
     category:"Climbing",
     level: "Expert",
@@ -75,7 +75,7 @@ const locations = [
     photo:'https://laidbackplaces.com/wp-content/uploads/2022/05/siurana.jpg'
   },
   {
-    creator:"636d137acd2dd5a97f71f8cb",
+    creator:"636e07ff57af442b371d9dd4",
     city: "Siurana",
     category:"Climbing",
     level: "Expert",

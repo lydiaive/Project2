@@ -9,11 +9,15 @@
                 <p> {{locationDb.description}}</p>
                 <img src="/images/navbar-Icons/quotation-end.png" alt="" class="quot quot-end">
             </div>
-            <p>Category: {{locationDb.category}}</p>
-            <p>Level: {{locationDb.level}}</p>
+            <div class="category-level">
+                <p class="spanBlue">Category: <span>{{locationDb.category}}</span></p>
+                <p class="spanBlue">Level: <span>{{locationDb.level}}</span></p>
+            </div>
             <div class="creator-footer">
                 <p>{{locationDb.creator.username}}</p>
-                <img class="profile-img-listing" src="{{locationDb.creator.imageUrl}}" alt="">
+                <div class="profile-img-container-sm">
+                    <img class="profile-img-sm" src="{{locationDb.creator.imageUrl}}" alt="profile image">
+                </div>
             </div>
         </article>
 </section>

@@ -36,7 +36,7 @@ const createUsers = async function() {
       const connect = await mongoose.connect(MONGO_URI)
       console.log("TEST")
       console.log(`Connected to database: ${connect.connections[0].name}`)
-      const deleteAll = await User.deleteMany()
+      //const deleteAll = await User.deleteMany()
       console.log("Db clean")
       const dbusers = await User.create(users)// Book IS A CONTAST THAT OS REQUIRNG / CONNECTING THE BOOK MODEL. AND CREATE IS A BUILT IN METHOD? OF MONGOOSE ? OR HB? OR WHAT GIVES THIS FUNCTIONALITY??
       console.log(`${dbusers.length} - locations created `)

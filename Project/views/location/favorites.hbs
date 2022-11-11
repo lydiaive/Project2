@@ -6,7 +6,9 @@
     <a href="/location/detail/{{this._id}}" class="detail-card">
         <div class="location-card">
             <div class="card-header">
-                <img class ="profile-img-listing" src="{{this.creator.imageUrl}}" alt="profile image">
+                <div class="profile-img-container-sm">
+                    <img class="profile-img-sm" src="{{this.creator.imageUrl}}" alt="profile image">
+                </div>
                 <span>{{this.creator.username}}</span>
             </div>
             <div class="location-img-container">
@@ -18,8 +20,8 @@
             <article class="location-data">
                 <h3>Location-Name: {{this.city}}</h3>
                 <div class="card-footer">
-                    <p>Category: {{this.category}}</p>
-                    <p>Level: {{this.level}}</p>
+                    <p>Category: <span>{{this.category}}</span></p>
+                    <p>Level: <span>{{this.level}}</span></p>
                 </div>
                 {{!-- <p>Created at: {{this.createdAt}}</p> --}}
             </article>
