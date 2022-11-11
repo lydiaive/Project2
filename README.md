@@ -1,29 +1,35 @@
 # Spot your Spot - Project 2
 
-##About the Project
+## About the Project
 The application **Spot Your Spot** is a tool for sports interested people who want to network and share their favorite spots and experiences on locations to **Surf** or **Climb**.
 
 To access the main features of the app a sign up of the user is necessary. There are no costs to use the networking-app.
 
-###Features:
+### Features:
 The main features of the tool are the technologie to upload new "sports-Spots" and stream through spots, created by others or find and access them on map. 
 
 Your favorite spots can be liked and bookmarked to your favorites-list. 
 
 As a creator or consumer of the app you are also able to share some information about yourself on your profile-page.
 
-![Home](/Project/public/images/readme/Bildschirmfoto 2022-11-11 um 12.41.32.png)
-![Main-Feed](/Project/public/images/readme/Bildschirmfoto 2022-11-11 um 12.42.08.png)
-![Navigation](/Project/public/images/readme/Bildschirmfoto 2022-11-11 um 12.42.28.png)
-![Profile](/Project/public/images/readme/Bildschirmfoto 2022-11-11 um 12.42.46.png)
-![Location-Detail](/Project/public/images/readme/Bildschirmfoto 2022-11-11 um 12.43.03.png)
-![Map](/Project/public/images/readme/Bildschirmfoto 2022-11-11 um 12.43.24.png)
-![Favorit-List](/Project/public/images/readme/Bildschirmfoto 2022-11-11 um 12.43.47.png)
+![Home](/Project/public/images/readme/Bildschirmfoto32.png)
+
+![Main-Feed](/Project/public/images/readme/Bildschirmfoto08.png)
+
+![Navigation](/Project/public/images/readme/Bildschirmfoto.png)
+
+![Profile](/Project/public/images/readme/Bildschirmfoto46.png)
+
+![Location-Detail](/Project/public/images/readme/Bildschirmfoto03.png)
+
+![Map](/Project/public/images/readme/Bildschirmfoto24.png)
+
+![Favorit-List](/Project/public/images/readme/Bildschirmfoto47.png)
 
 ### Presentation:
 [Slides](https://slides.com/molibi01/minimal/fullscreen) 
 
-##Built With
+## Built With
 - HTML
 - CSS
 - JavaScript
@@ -37,12 +43,12 @@ also in Use:
 - Mapbox
 - Cloudinary
 
-##Getting Started
-###Prerequisites:
+## Getting Started
+### Prerequisites:
  - npm
  `npm install npm@latest -g`
 
-###Installation
+### Installation
 - Get your free API Key and Secret at:
     - [Mapbox](https://www.mapbox.com/) 
     - [Cloudinary](https://console.cloudinary.com/) 
@@ -53,7 +59,7 @@ also in Use:
 - run seed2.js and seed.js
 
 
-##Routes
+## Routes
 | Syntax | Description |Description |Description |
 | ----------- | ----------- | ----------- | ----------- |
 | Rout | Method | render/redirect | Aim/Path |
@@ -77,7 +83,7 @@ also in Use:
 | /like/:locationId/delete-fave| POST | redirect | /profile/favorites |
 
 
-##Nice to haves in the Futures
+## Nice to haves in the Futures
 - Sorting & Filter
 - Live Communikation
 - User-Geo-Location 
