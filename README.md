@@ -12,19 +12,13 @@ Your favorite spots can be liked and bookmarked to your favorites-list.
 
 As a creator or consumer of the app you are also able to share some information about yourself on your profile-page.
 
-![Home](/Project/public/images/readme/Bildschirmfoto32.png =200x)
-
-![Main-Feed](/Project/public/images/readme/Bildschirmfoto08.png =200x)
-
-![Navigation](/Project/public/images/readme/Bildschirmfoto.png =200x)
-
-![Profile](/Project/public/images/readme/Bildschirmfoto46.png =200x)
-
-![Location-Detail](/Project/public/images/readme/Bildschirmfoto03.png =200x)
-
-![Map](/Project/public/images/readme/Bildschirmfoto24.png =200x)
-
-![Favorit-List](/Project/public/images/readme/Bildschirmfoto47.png =200x)
+<img src="/Project/public/images/readme/Bildschirmfoto32.png" alt="Home" width="200"/>
+<img src="/Project/public/images/readme/Bildschirmfoto08.png" alt="Main-Feed]" width="200"/>
+<img src="/Project/public/images/readme/Bildschirmfoto.png" alt="Navigation" width="200"/>
+<img src="/Project/public/images/readme/Bildschirmfoto46.png" alt="Profile" width="200"/>
+<img src="/Project/public/images/readme/Bildschirmfoto03.png" alt="Location-Detail" width="200"/>
+<img src="/Project/public/images/readme/Bildschirmfoto24.png" alt="Map" width="200"/>
+<img src="/Project/public/images/readme/Bildschirmfoto47.png" alt="Favorit-List" width="200"/>
 
 ### Presentation:
 [Slides](https://slides.com/molibi01/minimal/fullscreen) 
