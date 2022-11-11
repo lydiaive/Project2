@@ -15,6 +15,11 @@ router.get("/", isLoggedIn, async(req, res) => {
   try {
     const data = await Location.find()
     const userDb = await User.findById(user)
+    const mapCenter = [2.1686, 41.3874]//note this API takes cooridnate the other way around. Its foxed later on buty keep in mind
+    const mapZoom = 11
+  
+    const littleMapDb = await Location.find()
+    console.log(littleMapDb)
 
     let result = []
 
@@ -42,7 +47,8 @@ router.get("/", isLoggedIn, async(req, res) => {
       } //console.log("Zwischentest", locationDb[i].liked)
     } 
     console.log(locationDb)
-    res.render("location/main-feed", {locationDb, user});
+
+    res.render("location/main-feed", {locationDb, user, littleMapDb, mapCenter, mapZoom});
     
   } catch (error) {
     console.log(error)
