@@ -22,11 +22,12 @@ router.get("/", isLoggedIn, async(req, res) => {
       const obj = await data[i].populate("creator")
       result.push(obj)
     }
-    console.log(result)
+    //console.log(result)
 
     const locationDb = result.map(el => {
       return {
         _id: el._id,
+        creator: el.creator,
         city: el.city,
         category: el.category,
         level: el.level,
@@ -37,10 +38,10 @@ router.get("/", isLoggedIn, async(req, res) => {
     for (let i = 0; i < locationDb.length; i++) { 
       if (userDb.favorites.includes(locationDb[i]._id)) {
         locationDb[i].liked = true
-        console.log(locationDb[i])
-      } console.log("Zwischentest", locationDb[i].liked)
+        //console.log(locationDb[i])
+      } //console.log("Zwischentest", locationDb[i].liked)
     } 
-    console.log(locationDb[0])
+    console.log(locationDb)
     res.render("location/main-feed", {locationDb, user});
     
   } catch (error) {
