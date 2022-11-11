@@ -12,13 +12,10 @@ Your favorite spots can be liked and bookmarked to your favorites-list.
 
 As a creator or consumer of the app you are also able to share some information about yourself on your profile-page.
 
-<img src="/Project/public/images/readme/Bildschirmfoto32.png" alt="Home" width="200"/>
-<img src="/Project/public/images/readme/Bildschirmfoto08.png" alt="Main-Feed]" width="200"/>
-<img src="/Project/public/images/readme/Bildschirmfoto24.png" alt="Navigation" width="200"/>
-<img src="/Project/public/images/readme/Bildschirmfoto46.png" alt="Profile" width="200"/>
-<img src="/Project/public/images/readme/Bildschirmfoto03.png" alt="Location-Detail" width="200"/>
-<img src="/Project/public/images/readme/Bildschirmfoto24.png" alt="Map" width="200"/>
-<img src="/Project/public/images/readme/Bildschirmfoto47.png" alt="Favorit-List" width="200"/>
+| Home | MainFeed | Navigation | Profile | Location-Detail | Map |Favorit-List |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+|<img src="/Project/public/images/readme/Bildschirmfoto32.png" alt="Home" width="200"/>|<img src="/Project/public/images/readme/Bildschirmfoto08.png" alt="Main-Feed]" width="200"/>| <img src="/Project/public/images/readme/Bildschirmfoto24.png" alt="Navigation" width="200"/>|/<img src="/Project/public/images/readme/Bildschirmfoto46.png" alt="Profile" width="200"/>|<img src="/Project/public/images/readme/Bildschirmfoto03.png" alt="Location-Detail" width="200"/>|/<img src="/Project/public/images/readme/Bildschirmfoto24.png" alt="Map" width="200"/>|<img src="/Project/public/images/readme/Bildschirmfoto47.png" alt="Favorit-List" width="200"/>|
+
 
 ### Presentation:
 [Slides](https://slides.com/molibi01/minimal/fullscreen) 
@@ -54,9 +51,8 @@ also in Use:
 
 
 ## Routes
-| Syntax | Description |Description |Description |
-| ----------- | ----------- | ----------- | ----------- |
 | Rout | Method | render/redirect | Aim/Path |
+| ----------- | ----------- | ----------- | ----------- |
 | / | GET | render | /index|
 | /auth/signup | GET | render | /auth/signup |
 | /auth/signup | POST | redirect | /profile/edit-profile |
@@ -81,3 +77,4 @@ also in Use:
 - Sorting & Filter
 - Live Communikation
 - User-Geo-Location 
+- Make it responsive
