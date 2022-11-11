@@ -14,7 +14,7 @@ As a creator or consumer of the app you are also able to share some information 
 
 <img src="/Project/public/images/readme/Bildschirmfoto32.png" alt="Home" width="200"/>
 <img src="/Project/public/images/readme/Bildschirmfoto08.png" alt="Main-Feed]" width="200"/>
-<img src="/Project/public/images/readme/Bildschirmfoto.png" alt="Navigation" width="200"/>
+<img src="/Project/public/images/readme/Bildschirmfoto24.png" alt="Navigation" width="200"/>
 <img src="/Project/public/images/readme/Bildschirmfoto46.png" alt="Profile" width="200"/>
 <img src="/Project/public/images/readme/Bildschirmfoto03.png" alt="Location-Detail" width="200"/>
 <img src="/Project/public/images/readme/Bildschirmfoto24.png" alt="Map" width="200"/>
